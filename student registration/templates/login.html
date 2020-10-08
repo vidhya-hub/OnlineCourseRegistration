@@ -1,0 +1,18 @@
+{% extends "common.html" %}
+{% block vidhya %}
+    <form action="{% url 'validate' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="1" bgcolor="#ff8c00">
+        <tr><th colspan="2" style="background-color: chartreuse;color: purple;font-size: 20px">
+         LOGIN
+        </th></tr>
+        {{ form }}
+        <tr>
+            <th colspan="2">
+                <button type="submit">save</button>
+            </th>
+        </tr>
+        <tr><th>{{ error }}</th></tr>
+    </table>
+    </form>
+{% endblock %}

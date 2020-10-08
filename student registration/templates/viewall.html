@@ -1,0 +1,25 @@
+{% extends "common.html" %}
+{% block vidhya %}
+    <table align="center" border="2" width="600" height="250">
+        <tr><th colspan="6" style="color: purple;background-color: lightcyan;text-align: center;font-size: 25px">View All Student</th></tr>
+    <tr style="font-size: 20px;background-color: purple;color: lightcyan;font-family: Arial;">
+        <th>Name</th>
+        <th>Age
+        </th>
+        <th>Course</th>
+        <th>Email id</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    {% for x in object_list %}
+        <tr style="color: indigo;background-color: orange;font-size: 20px;font-family: 'Agency FB'">
+        <th>{{ x.name }}</th>
+        <th>{{ x.age }}</th>
+        <th>{{ x.course }}</th>
+        <th>{{ x.email }}</th>
+        <th><a href="{%  url 'update' x.id %}">update </a></th>
+        <th><a href="{% url 'delete' x.id %}"> delete</a></th>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

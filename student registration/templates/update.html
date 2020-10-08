@@ -1,0 +1,12 @@
+{% extends "common.html" %}
+{% block vidhya %}
+    <form  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <th>{{ form }}</th>
+        </tr>
+    <tr><th><button type="submit">update</button></th></tr>
+    </table>
+    </form>
+{% endblock %}

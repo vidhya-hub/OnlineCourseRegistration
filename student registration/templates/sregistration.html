@@ -1,0 +1,14 @@
+{% extends "common.html" %}
+{% block vidhya %}
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <table align="center" border="2" bgcolor="#a52a2a">
+        <tr><th style="font-size: 20px;font-family: Arial;color: lightcyan" colspan="2">Student Registration</th></tr>
+           {{ form }}
+
+        <tr>
+            <th colspan="2"><button type="submit">save</button> </th>
+        </tr>
+        </table>
+    </form>
+{% endblock %}
